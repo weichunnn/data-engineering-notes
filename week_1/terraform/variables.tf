@@ -19,7 +19,7 @@ variable "storage_class" {
 
 variable "credentials" {
   description = "Your GCP Service Account credentials"
-  default = "/Users/weichun/Desktop/data_engineering/zoomcamp-340415-ffebdd20b7b5.json"
+  default = "~/.google/credentials/google_credentials.json"
   type = string
 }
 
