@@ -54,11 +54,7 @@ def download_parquetize_upload_dag(
         local_to_gcs_task = PythonOperator(
             task_id="local_to_gcs_task",
             python_callable=upload_to_gcs,
-            op_kwargs={
-                "bucket": BUCKET,
-                "object_name": gcs_path_template,
-                "local_file": local_parquet_path_template,
-            },
+            op_kwargs={"bucket": BUCKET, "object_name": gcs_path_template, "local_file": local_parquet_path_template,},
         )
 
         rm_task = BashOperator(
